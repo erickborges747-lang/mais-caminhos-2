@@ -1,6 +1,6 @@
 /* Topo */
 .section-topo-opportunity {
-    background-image: url(../midia/oportunidades/image-topo.png);
+    background-image: url(./midia/oportunidades/image-topo.png);
     background-size: cover;
     background-position: top;
     background-attachment: fixed;
@@ -19,7 +19,7 @@
 
 /* Seção Corpo */
 .section-corpo-opportunity {
-    background-image: url(../midia/imagens-prontas/fundo-branco-final.svg);
+    background-image: url(./midia/imagens-prontas/fundo-branco-final.svg);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -136,3 +136,4 @@
         font-size: 1em;
     }
 }
+
