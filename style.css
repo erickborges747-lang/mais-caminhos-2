@@ -1,0 +1,702 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #fff6f0;
+}
+
+/*header-geral*/
+
+#logo-header {
+    height: 57px;
+}
+
+header {
+    background: #e89ca3;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    position: fixed;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.link-header {
+    font-weight: 200;
+    font-size: 1em;
+    color: #fff6f0;
+    margin-right: 44px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.link-header:hover {
+    color: #3c3c3c;
+}
+
+/*Botão hamburguer*/
+#menu-toggle {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #fff6f0;
+    user-select: none;
+}
+
+/*Tablet*/
+@media (max-width: 900px) {
+    header {
+        padding: 10px 20px;
+    }
+}
+
+/*Celular*/
+@media (max-width: 700px) {
+    #menu-toggle {
+        display: block; /*mostra o botão*/
+    }
+
+    nav {
+        display: none; /*esconde o menu inicialmente*/
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        background-color: #e89ca3;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1em 2em;
+        gap: 1em;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    nav.show {
+        display: flex; /*mostra o menu ao clicar*/
+    }
+
+    .link-header {
+        font-size: 1em;
+        margin: 0;
+    }
+}
+
+/* === CARROSSEL DE BANNERS === */
+
+/*Responsividade*/
+/*Tablet*/
+@media (max-width: 768px) {
+    .carrossel {
+        height: 60vh;
+    }
+
+    .button-banner {
+        bottom: 2em;
+        padding: 0.6em 1.6em;
+        font-size: 0.9em;
+    }
+
+    .slider-controls button {
+        width: 2em;
+        height: 2em;
+        font-size: 1em;
+    }
+}
+
+/*Celular*/
+@media (max-width: 360px) {
+    .carrossel {
+        height: 50vh;
+    }
+
+    .button-banner {
+        bottom: 1.5em;
+        font-size: 0.8em;
+    }
+
+    .slider-controls {
+        padding: 0 0.5em;
+    }
+}
+
+.banner-section {
+    padding-top: 4.8em;
+    overflow: hidden;
+}
+
+.carrossel {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+/* === SLIDES === */
+.slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  z-index: 0;
+}
+
+.slides.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* === IMAGEM DO SLIDE === */
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === BOTÃO "SAIBA MAIS" === */
+.button-banner {
+  position: absolute;
+  bottom: 3em; /* distância do fundo da imagem */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #86c7a1;
+  color: white;
+  padding: 0.8em 2em;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-size: 1em;
+  z-index: 2;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-banner:hover {
+  background-color: #a68cb6;
+  transform: translateX(-50%) scale(1.05);
+}
+
+/* === BOTÕES DE CONTROLE (❮ ❯) === */
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 1em;
+  z-index: 3;
+}
+
+.button-control {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-control:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*seção-2*/
+
+#section-2 {
+    display: flex;
+    justify-content: center;
+    gap: 3em; /* espaço entre os cards*/
+    flex-wrap: wrap; /* permite empilhar em telas pequenas*/
+    padding: 4em 2em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2em;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px #e89ca3;
+    width: 20em;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.titulo-section-2 {
+    font-weight: 900;
+    font-size: 1.4em;
+    line-height: 1.2em;
+    height: 2em;
+    color: #a68cb6;
+    margin-bottom: 1em;
+}
+.image-section-2 {
+    width: 100%;
+    max-width: 19em;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.text-section-2 {
+    font-weight: 400;
+    font-size: 1.3em;
+    line-height: 1.4em;
+    color: #3c3c3c;
+    margin-bottom: 1.5em;
+}
+
+/*config-geral-button*/
+
+.button-geral {
+    font-weight: 200;
+    font-size: 15px;
+    line-height: normal;
+    color: #fff6f0;
+    background: #86c7a1;
+    width: 200px;
+    height: 51.6px;
+    border: none;
+    border-radius: 34px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-geral:hover {
+    background: #a68cb6;
+    animation-delay: 4ms;
+}
+
+/* === MEDIA QUERIES ===*/
+
+/*Tablet*/
+@media (max-width: 900px) {
+    #section-2 {
+        gap: 2em;
+    }
+
+    .card {
+        width: 18em;
+    }
+}
+
+/*Celular*/
+@media (max-width: 600px) {
+    #section-2 {
+        flex-direction: column;
+        align-items: center;
+        padding: 2em 1em;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 20em;
+    }
+}
+
+/*seção-cursos*/
+
+.cursos-section {
+    background-image: url(../midia/imagens-prontas/fundo-rosa-final.svg);
+    background-size: cover;
+    background-position: center;
+    height: 580px;
+    padding: 4em 2em;
+    gap: 2em;
+}
+
+/*config-container-cursos-educação-oportunidades*/
+
+.cursos-edu-opo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 80px;
+    margin-left: 10%;
+    gap: 8em;
+    flex-wrap: wrap;
+}
+
+/*config-seção-cursos-e-oportunidades*/
+
+#image-cursos {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 7%;
+    height: auto;
+    display: flex;
+    justify-content: start;
+}
+
+.overlay-cursos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    max-width: 500px;
+}
+
+.titulo-cursos {
+    font-weight: 900;
+    font-size: 1.3em;
+    line-height: 1.4em;
+    color: #fff6f0;
+}
+
+.text-cursos {
+    font-weight: 400;
+    font-size: 1.1em;
+    line-height: 1.4em;
+    color: #3c3c3c;
+}
+
+/* === MEDIA QUERIES === */
+
+/*Tablet*/
+@media (max-width: 900px) {
+    .cursos-section {
+        height: 1300px;
+        display: flex;
+        align-items: center;
+    }
+
+    .cursos-edu-opo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .overlay-cursos {
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/*Celular*/
+@media (max-width: 600px) {
+    .cursos-section {
+        height: 1200px;
+        display: flex;
+        align-items: center;
+    }
+
+    .cursos-edu-opo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+    }
+
+    #image-cursos {
+        max-width: 90%;
+    }
+}
+
+/*seção-educação*/
+
+.educacao-section {
+    background-image: url(../midia/imagens-prontas/fundo-branco-final.svg);
+    background-size: cover;
+    background-position: center;
+    height: 580px;
+    display: flex;
+    align-items: center;
+}
+
+#image-educacao {
+    width: 25em;
+    max-width: 100%;
+    height: auto;
+}
+
+.titulo-educacao {
+    font-weight: 900;
+    font-size: 1.4em;
+    line-height: 1.5em;
+    color: #a68cb6;
+}
+
+.overlay-educacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 45px;
+    gap: 1.5em;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .educacao-section {
+        height: 600px;
+        display: flex;
+        align-items: center;
+    }
+
+    .overlay-educacao {
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/*------------------------*/
+/* === RESPONSIVIDADE === */
+/*------------------------*/
+@media (max-width: 768px) {
+    .cursos-edu-opo {
+        flex-direction: column;
+        text-align: center;
+        padding: 2em;
+    }
+
+    #image-educação {
+        width: 90%;
+        margin-top: 2em;
+    }
+
+    .titulo-educacao {
+        font-size: 1.2em;
+    }
+
+    .text-cursos {
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+}
+
+/*Seção-oportunidades*/
+
+.oportunidades-section {
+    background-image: url(../midia/imagens-prontas/fundo-rosa-finishi.svg);
+    background-size: cover;
+    background-position: center;
+    height: 580px;
+    padding: 4em 2em;
+}
+
+/* === Media queries === */
+@media (max-width: 900px) {
+     .oportunidades-section {
+        height: 900px;
+        display: flex;
+        align-items: center;
+        padding: 3em 1em;
+    }
+}
+
+@media (max-width: 600px) {
+     .oportunidades-section {
+        height: 1000px;
+        display: flex;
+        align-items: center;
+        padding: 3em 1em;
+    }
+}
+
+/*Footer-geral*/
+#rodape {
+    border-top: 1px solid #e89ca3;
+    padding-top: 4em;
+    margin-top: 6em;
+    background-color: #fff6f0;
+}
+
+/*bloco superior (logo + contatos + links utéis)*/
+.container-geral {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2em;
+    text-align: center;
+}
+
+.container-logo-text {
+    display: flex;
+    flex-direction: column  ;
+    text-align: center;
+    align-items: center;
+}
+
+.image-rodape {
+    width: 300px;
+    max-width: 80%;
+}
+
+.titulo-logo-rodape {
+    font-weight: 300;
+    font-size: 0.9em;
+    line-height: 2em;
+    margin-top: 0.5em;
+}
+
+/* --- Seção de links --- */
+.container-contatos,
+.container-links-uteis {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo-rodape {
+    font-weight: 300;
+    font-size: 1.3em;
+    line-height: 1.8em;
+    color: #3c3c3c;
+    margin-bottom: 0.5em;
+}
+
+.text-rodape-link {
+    font-weight: 200;
+    font-size: 1em;
+    line-height: 1.8em;
+    color: #3c3c3c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.text-rodape-link:hover {
+    color: #e89ca3;
+}
+
+/* --- Direitos autorais ---*/
+.container-direitos-autorais {
+  border-top: 1px solid #e89ca3;
+  margin-top: 2em;
+}
+
+.text-direitos-autorais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 0.5em;
+    padding: 2em;
+}
+
+.text-rodape {
+    font-weight: 200;
+    font-size: 1em;
+    line-height: 30px;
+    color: #3c3c3c;
+    text-decoration: none;
+}
+
+.caracter-rodape {
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 30px;
+    color: #3c3c3c;
+    padding: 0 0.5em;
+}
+
+.direito-reservado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em;
+}
+
+/* === MEDIA QUERIES ===*/
+
+/*Tablet*/
+@media (max-width: 900px) {
+    .container-geral {
+        flex-direction: row;
+        justify-content: center;
+        gap: 3em;
+    }
+
+    .image-rodape {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-geral {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+}
+
+/*Celular*/
+@media (max-width: 600px) {
+    .container-geral {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container-contatos,
+    .container-links-uteis {
+        align-items: center;
+    }
+
+    .image-rodape {
+        width: 200px;
+    }
+
+    .text-direitos-autorais {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5em;
+    }
+
+    .caracter-rodape {
+        display: none; /*Tira o "|" no mobile*/
+    }
+}
+
+@media (max-width: 400px) {
+    .container-geral {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container-contatos,
+    .container-links-uteis {
+        align-items: center;
+    }
+
+    .image-rodape {
+        width: 180px;
+    }
+
+    .text-direitos-autorais {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5em;
+    }
+
+    .caracter-rodape {
+        display: none; /*Tira o "|" no mobile*/
+    }
+}

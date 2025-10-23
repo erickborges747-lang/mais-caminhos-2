@@ -1,0 +1,326 @@
+/*Topo*/
+.section-topo {
+    background-image: url(../midia/imagens-bem-estar/fundo-topo-image.png);
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    height: 25em;
+    padding: 7em;
+    border-bottom: 1px solid #e89ca3;
+}
+
+.titulo-topo {
+    font-weight: 900;
+    font-size: 3vw;
+    line-height: 2vh;
+    color: #fff6f0;
+    margin-top: 1em;
+}
+
+/* Responsividade - Topo Bem-Estar */
+@media (max-width: 1024px) {
+    .section-topo {
+        height: 20em;
+        padding: 5em 3em;
+        background-attachment: scroll; /* melhora desempenho em mobile */
+    }
+
+    .titulo-topo {
+        font-size: 4vw;
+        text-align: center;
+        line-height: 1.5em;
+        margin-top: 0.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-topo {
+        height: 18em;
+        padding: 4em 2em;
+    }
+
+    .titulo-topo {
+        font-size: 5vw;
+        line-height: 1.4em;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-topo {
+        height: 16em;
+        padding: 3em 1.5em;
+        background-position: center;
+    }
+
+    .titulo-topo {
+        font-size: 6vw;
+        line-height: 1.3em;
+        margin-top: 1.2em;
+        text-align: center;
+    }
+}
+
+
+/*Seção-corpo-mente-proteção*/
+.section-corpo {
+    background-image: url(../midia/imagens-prontas/fundo-branco-final.svg);
+    background-size: cover;
+    background-position: center;
+    min-height: 25em;
+}
+
+.titulo-section-corpo {
+    font-weight: 900;
+    font-size: 8em;
+    color: #e89ca3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 1em;
+}
+
+.overlay-corpo-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 8em;
+}
+
+.subtitulo-section-corpo {
+    font-weight: 700;
+    font-size: 2em;
+    line-height: 3em;
+    color: #3c3c3c;
+}
+
+.text-section-corpo {
+    font-weight: 400;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: #3c3c3c;
+}
+
+/* === Responsividade === */
+/*Tablets*/
+@media (max-width: 1024px) {
+    .section-corpo {
+    min-height: 12em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+    .titulo-section-corpo {
+    font-size: 5em;
+    justify-content: center;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .overlay-corpo-2 {
+    padding: 3em;
+  }
+}
+
+/* celulares */
+@media (max-width: 600px) {
+  .section-corpo {
+    min-height: 12em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .titulo-section-corpo {
+    font-size: 3em;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .overlay-corpo-2 {
+    padding: 0.1em;
+  }
+
+  .subtitulo-section-corpo {
+    font-size: 1.4em;
+    line-height: 2em;
+  }
+
+  .text-section-corpo {
+    font-size: 1em;
+    line-height: 1.4em;
+  }
+}
+
+/*subseções*/
+.card-subsections {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2em;
+}
+
+.images-subsections {
+    width: 14em;
+    border-radius: 12px;
+}
+
+.card-text-subsections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.subtitulo-subsections {
+    font-weight: 900;
+    font-size: 2em;
+    line-height: 3em;
+    color: #a68cb6;
+}
+
+.text-subsections {
+    font-weight: 400;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: #3c3c3c;
+    width: 50em;
+}
+
+.link-subsections {
+    font-weight: 600;
+    font-size: 1.2em;
+    line-height: 2em;
+    color: #3c3c3c;
+    text-decoration: none;
+}
+
+.link-subsections:hover {
+    color: #86c7a1;
+}
+
+.videos-subsections {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8em;
+
+}
+
+.text-subsections-video {
+    font-weight: 400;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    text-align: center;
+    color: #3c3c3c;
+    width: 44   em;
+    margin-left: 3em;
+}
+
+/*Config-espaço-video*/
+.video-prevencao {
+    margin-bottom: 3em;
+}
+
+/* ============================= */
+/* RESPONSIVIDADE – SUBSEÇÕES */
+/* ============================= */
+
+/* Tablets (até 1024px) */
+@media (max-width: 1024px) {
+    .card-subsections {
+        flex-direction: column;
+        text-align: center;
+        padding: 2em 1em;
+    }
+
+    .images-subsections {
+        width: 18em;
+        margin-bottom: 1.5em;
+    }
+
+    .text-subsections {
+        width: 90%;
+        font-size: 1.1em;
+    }
+
+    .videos-subsections {
+        flex-direction: column;
+        padding: 4em 2em;
+    }
+
+    .text-subsections-video {
+        width: 80%;
+        margin: 2em 0 0 0;
+        font-size: 1.1em;
+    }
+
+    iframe {
+        width: 80%;
+        height: 300px;
+    }
+
+    .video-prevencao {
+    margin-bottom: 2.5em;
+  }
+}
+
+/* Celulares (até 768px) */
+@media (max-width: 768px) {
+    .card-subsections {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5em 1em;
+    }
+
+    .images-subsections {
+        margin-top: 6em;
+        width: 80%;
+        max-width: 250px;
+    }
+
+    .subtitulo-subsections {
+        font-size: 1.2em;
+        line-height: 1.4em;
+    }
+
+    .text-subsections {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .link-subsections {
+        font-size: 1em;
+    }
+
+    .videos-subsections {
+        flex-direction: column;
+        align-items: center;
+        padding: 3em 1em;
+        margin-top: 4em;
+    }
+
+    .subsection-prevencao {
+        margin-top: 3em;
+    }
+
+    iframe {
+        width: 100%;
+        max-width: 350px;
+        height: 200px;
+    }
+
+    .text-subsections-video {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 1.5em;
+        font-size: 1em;
+    }
+
+    .video-prevencao {
+    margin-bottom: 1em;
+  }
+}

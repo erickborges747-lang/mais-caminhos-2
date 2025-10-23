@@ -1,0 +1,138 @@
+/* Topo */
+.section-topo-opportunity {
+    background-image: url(../midia/oportunidades/image-topo.png);
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    height: 25em;
+    padding: 7em;
+    border-bottom: 1px solid #e89ca3;
+}
+
+.titulo-topo-opportunity {
+    font-weight: 900;
+    font-size: 3vw;
+    line-height: 2vh;
+    color: #fff6f0;
+    margin-top: 1em;
+}
+
+/* Seção Corpo */
+.section-corpo-opportunity {
+    background-image: url(../midia/imagens-prontas/fundo-branco-final.svg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 25em;
+
+}
+
+.titulo-corpo-opportunity {
+    font-weight: 900;
+    font-size: 8em;
+    color: #e89ca3; 
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    margin-right: 1em;
+}
+
+.overlay-corpo-opportunity {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1em 2em;
+}
+
+.subtitulo-corpo-opportunity {
+    font-weight: 700;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    color: #3c3c3c;
+    margin-bottom: 0.5em;
+}
+
+.text-corpo-opportunity {
+    font-weight: 400;
+    font-size: 1.2em;
+    line-height: 1.6em;
+    color: #3c3c3c;
+}
+
+/* Subsections Oportunidades */
+.subsection-opportunity {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 2em;
+    gap: 2em;
+}
+
+.card-text-opportunity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 200px;
+}
+
+.card-text-opportunity h3 {
+    font-weight: 900;
+    font-size: 1.5em;
+    color: #a68cb6;
+    margin-bottom: 0.5em;
+}
+
+.card-text-opportunity a {
+    font-weight: 600;
+    font-size: 1.1em;
+    line-height: 2em;
+    color: #3c3c3c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-bottom: 0.5em;
+}
+
+.card-text-opportunity a:hover {
+    color: #86c7a1; /* Cor de destaque no hover */
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .subsection-opportunity {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .overlay-corpo-opportunity {
+        padding: 1em;
+    }
+
+    .titulo-topo-opportunity {
+        font-size: 5vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-corpo-opportunity {
+        height: 10em;
+    }
+
+    .titulo-corpo-opportunity {
+        display: flex;
+        justify-content: end;
+        align-items: flex-end;
+        font-size: 2em;
+    }
+
+    .subtitulo-corpo-opportunity {
+        font-size: 1.2em;
+    }
+
+    .text-corpo-opportunity {
+        font-size: 1em;
+    }
+}
