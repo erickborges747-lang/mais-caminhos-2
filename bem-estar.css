@@ -1,6 +1,6 @@
 /*Topo*/
 .section-topo {
-    background-image: url(../midia/imagens-bem-estar/fundo-topo-image.png);
+    background-image: url(./midia/imagens-bem-estar/fundo-topo-image.png);
     background-size: cover;
     background-position: top;
     background-attachment: fixed;
@@ -64,7 +64,7 @@
 
 /*Seção-corpo-mente-proteção*/
 .section-corpo {
-    background-image: url(../midia/imagens-prontas/fundo-branco-final.svg);
+    background-image: url(./midia/imagens-prontas/fundo-branco-final.svg);
     background-size: cover;
     background-position: center;
     min-height: 25em;
@@ -324,3 +324,4 @@
     margin-bottom: 1em;
   }
 }
+
