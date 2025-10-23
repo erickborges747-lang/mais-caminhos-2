@@ -318,7 +318,7 @@ nav {
 /*seção-cursos*/
 
 .cursos-section {
-    background-image: url(../midia/imagens-prontas/fundo-rosa-final.svg);
+    background-image: url(./midia/imagens-prontas/fundo-rosa-final.svg);
     background-size: cover;
     background-position: center;
     height: 580px;
@@ -420,7 +420,7 @@ nav {
 /*seção-educação*/
 
 .educacao-section {
-    background-image: url(../midia/imagens-prontas/fundo-branco-final.svg);
+    background-image: url(./midia/imagens-prontas/fundo-branco-final.svg);
     background-size: cover;
     background-position: center;
     height: 580px;
@@ -492,7 +492,7 @@ nav {
 /*Seção-oportunidades*/
 
 .oportunidades-section {
-    background-image: url(../midia/imagens-prontas/fundo-rosa-finishi.svg);
+    background-image: url(./midia/imagens-prontas/fundo-rosa-finishi.svg);
     background-size: cover;
     background-position: center;
     height: 580px;
@@ -699,4 +699,5 @@ nav {
     .caracter-rodape {
         display: none; /*Tira o "|" no mobile*/
     }
+
 }
